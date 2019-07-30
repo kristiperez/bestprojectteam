@@ -1,0 +1,59 @@
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    #container{
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 1280px) {
+
+    #container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    #inner-container{
+        display: flex;
+        width: 700px;
+        height: 700px;
+    }
+
+    #map{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #map_holder{
+        width: 100% !important;
+        display: flex !important;
+    }
+
+    #map_inner{
+        width: 50% !important;
+        height: 50% !important;
+    }
+
+}
+
+body{
+    background-color:white;
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    font-weight: lighter !important;
+    text-decoration: underline;
+}
+
+#map_holder{
+    width: 200px;
+    height: 200px;
+}
