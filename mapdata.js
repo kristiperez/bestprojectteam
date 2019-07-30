@@ -69,8 +69,7 @@ var simplemaps_usmap_mapdata = {
     import_labels: 'no',    
 		link_text: 'View Website'  //Text mobile browsers will see for links	
 		
-	},
- 
+	}, 
 
 	state_specific:{	
 		"HI": {
@@ -477,14 +476,16 @@ var simplemaps_usmap_mapdata = {
       0: {
         name: 'New York City',					
         lat: 40.7143528,
-        lng: -74.0059731
+		lng: -74.0059731,
+		hide: "yes"
       },
 
       1: {
         name: 'Anchorage',
         lat: 61.2180556,
         lng: -149.9002778, 
-        color: 'default'
+		color: 'default',
+		hide: "yes"
       }
     },			
 	
@@ -546,9 +547,4 @@ var simplemaps_usmap_mapdata = {
       'MP':{parent_id: 'MP', x: '570', y: '575'},	
       'AS':{parent_id: 'AS', x: '665', y: '580'}
     }
-	
-}
-
-
-
-
+}	
