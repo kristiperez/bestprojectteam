@@ -4,7 +4,6 @@ let searchButton = document.getElementById("searchButton")
 let priceDiv = document.getElementById("priceDiv")
 let dropDownState = document.getElementById("dropDownState")
 
-let elecSales = "http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.AL-RES.A"
 
 async function fetchEiaData(URL) {
     let response = await fetch(URL)
@@ -12,45 +11,63 @@ async function fetchEiaData(URL) {
     return json
 }
 
-dropDownState.addEventListener('change', function() {
-    let state = this.value
-    
-    let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${state}-RES.A`
-
-    let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${state}-RES.A`
-
-
-    function displayStateData() {
-        fetchEiaData(elecSalesStateURL).then(json => {
-            // console.log(json)
-            let dataValues = json.series[0].data
-            let graphObjectArray = dataValues.map(reading => {
-                return {
-                    y: reading[1],
-                    label: reading[0]
-                }
-            })
-            displayKwGraph(graphObjectArray)
+function displayStateData(url) {
+    fetchEiaData(url).then(json => {
+        // console.log(json)
+        let dataValues = json.series[0].data
+        let graphObjectArray = dataValues.map(reading => {
+            return {
+                y: reading[1],
+                label: reading[0]
+            }
         })
-        
-    }
-    displayStateData()
+        displayKwGraph(graphObjectArray)
+    })
 
-    function displayPriceData() {
-        fetchEiaData(elecPriceStateURL).then(json => {
-            let dataValues = json.series[0].data
-            let graphObjectArray = dataValues.map(reading => {
-                return {
-                    y: reading[1],
-                    label: reading[0]
-                }
+}
+
+function displayPriceData(url) {
+    fetchEiaData(url).then(json => {
+        let dataValues = json.series[0].data
+        let graphObjectArray = dataValues.map(reading => {
+            return {
+                y: reading[1],
+                label: reading[0]
+            }
+        })
+        displayPriceGraph(graphObjectArray)
+    })
+}
+
+let stateSelected = document.getElementById("stateSelected")
+setTimeout(() => {
+    let states = document.getElementsByTagName("path")
+    for(let i = 0; i < states.length; i++){
+        stateClass = states[i].className.animVal
+        let sm_state = [].slice.call(document.getElementsByClassName(stateClass))
+        let stateAbbr = stateClass.slice(-2)
+        sm_state.forEach(element => {
+            element.addEventListener('click', e => {
+                let stateJson = allStatesInfo.filter(stateInfo => {
+                    return stateInfo.Abbreviation == stateAbbr
+                })[0]
+                stateSelected.innerHTML = `
+                    <div>
+                        State Name: ${stateJson.State}
+                        Population: ${stateJson.Population}
+                        Square Miles: ${stateJson["Sq.Miles"]}
+                    </div>`
             })
-            displayPriceGraph(graphObjectArray)
+            let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
+
+            let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${stateAbbr}-RES.A`
+
+            displayStateData(elecSalesStateURL)
+
+            displayPriceData(elecPriceStateURL)
         })
     }
-    displayPriceData()
-
-})
+}, 1000)
 
 function displayKwGraph (KwArray) {
 

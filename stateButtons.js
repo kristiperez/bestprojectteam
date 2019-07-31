@@ -1,7 +1,7 @@
 // THIS IS STATE BUTTONS 
 
 let stateSelected = document.getElementById("stateSelected")
-
+let stateID = ""
 setTimeout(function() {
     let sm_state_CA = [].slice.call(document.getElementsByClassName("sm_state_CA"))
     console.log(document.getElementsByClassName("sm_state_CA"))
@@ -9,6 +9,13 @@ setTimeout(function() {
     sm_state_CA.forEach((element) => {
         element.addEventListener('click', (e) => {
             stateSelected.innerHTML = "California info goes here"
+            console.log(sm_state_CA[0].className.baseVal)
+            let stateID = "CA"
+            console.log(stateID)
+
+            displayStateData()
+
+            displayPriceData()
         })
     })
     let sm_state_TX = [].slice.call(document.getElementsByClassName("sm_state_TX"))
