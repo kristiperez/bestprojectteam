@@ -1,0 +1,7 @@
+Welcome to our project! This is a collaboration of Kristi Perez (https://github.com/kristiperez/), Umreen Imam (https://github.com/umreen24), Phillip Kennedy (https://github.com/PhilKennedy86), and Bryce Poeter (https://github.com/brycepoeter/). Our objective is to display information from the US Energy Information Administration API in a visually appealing, intuitive, and flexible manner. Ultimately, this will make energy information stored in JSON accessible to users with no coding experience. 
+
+We have focused on portraying information pertaining to residential electricity usage in the fifty states. This includes the number of residential electricity accounts in each state, average electricity usage, average price, and other similar categories. Our application could easily be adjusted to portray any of the information in the EIA API (https://www.eia.gov/opendata/). 
+
+In creating our app, we have pulled JSON files from the API and displayed the information they contain both graphically and textually. Users are able to click on a state in our interactive map to pull up a state snapshot. These click actions also open up our graphs section, which displays changes over time. As such, users can easily click through the fifty states to view not only a snapshot of each state's current situation but also a representation of its past as well. We hope that this interface will make studying and understanding the US energy market more accessible.  
+
+This project was made jointly by all members of the group with all members contributing to its creation. 
