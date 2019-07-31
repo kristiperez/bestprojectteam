@@ -57,16 +57,20 @@ setTimeout(() => {
                         Population: ${stateJson.Population}
                         Square Miles: ${stateJson["Sq.Miles"]}
                     </div>`
+                let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
+
+                let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${stateAbbr}-RES.A`
+    
+                displayStateData(elecSalesStateURL)
+    
+                displayPriceData(elecPriceStateURL)
             })
-            let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
 
-            let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${stateAbbr}-RES.A`
-
-            displayStateData(elecSalesStateURL)
-
-            displayPriceData(elecPriceStateURL)
         })
     }
+
+    
+
 }, 1000)
 
 function displayKwGraph (KwArray) {
