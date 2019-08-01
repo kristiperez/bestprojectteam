@@ -48,6 +48,7 @@ setTimeout(() => {
         let stateAbbr = stateClass.slice(-2)
         sm_state.forEach(element => {
             element.addEventListener('click', e => {
+                dropDownState.value = stateAbbr
                 let stateJson = allStatesInfo.filter(stateInfo => {
                     return stateInfo.Abbreviation == stateAbbr
                 })[0]
@@ -68,10 +69,26 @@ setTimeout(() => {
 
         })
     }
-
     
+    menuEvent()    
 
 }, 1000)
+
+function menuEvent() {
+    dropDownState.addEventListener('change', function() {
+        let state = ""
+        state = this.value
+        
+        let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${state}-RES.A`
+    
+        let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${state}-RES.A`
+    
+        displayStateData(elecSalesStateURL)
+    
+        displayPriceData(elecPriceStateURL)
+        
+    })
+}
 
 function displayKwGraph (KwArray) {
 
@@ -93,7 +110,6 @@ function displayKwGraph (KwArray) {
         }]
     });
     chart.render();
-    
 }
     
 function displayPriceGraph (PriceArray) {
@@ -116,5 +132,4 @@ function displayPriceGraph (PriceArray) {
         }]
     });
     chart.render();
-    
 }
