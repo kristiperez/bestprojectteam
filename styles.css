@@ -9,7 +9,18 @@
         background-color: #51cda0;
     }
 
+    #dropDownFreq{
+        background-color: #51cda0;
+    }
+
     #dropDownMenu{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    #freqMenu{
         display: flex;
         justify-content: center;
         margin-bottom: 50px;

@@ -3,7 +3,7 @@ let dataDiv = document.getElementById("dataDiv")
 let searchButton = document.getElementById("searchButton")
 let priceDiv = document.getElementById("priceDiv")
 let dropDownState = document.getElementById("dropDownState")
-
+let dropDownFreq = document.getElementById("dropDownFreq")
 
 async function fetchEiaData(URL) {
     let response = await fetch(URL)
@@ -49,6 +49,7 @@ setTimeout(() => {
         sm_state.forEach(element => {
             element.addEventListener('click', e => {
                 dropDownState.value = stateAbbr
+                dropDownFreq.value = "A"
                 let stateJson = allStatesInfo.filter(stateInfo => {
                     return stateInfo.Abbreviation == stateAbbr
                 })[0]
@@ -86,6 +87,7 @@ setTimeout(() => {
         sm_state.forEach(element => {
             element.addEventListener('click', e => {
                 dropDownState.value = stateAbbr
+                dropDownFreq.value = "A"
                 let stateJson = allStatesInfo.filter(stateInfo => {
                     return stateInfo.Abbreviation == stateAbbr
                 })[0]
@@ -131,6 +133,26 @@ function menuEvent() {
 }
 
 menuEvent()
+
+function freqEvent() {
+    dropDownFreq.addEventListener('change', function() {
+        let frequency = ""
+        frequency = this.value
+        state = dropDownState.value
+
+        let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${state}-RES.${frequency}`
+    
+        let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${state}-RES.${frequency}`
+    
+        displayStateData(elecSalesStateURL)
+    
+        displayPriceData(elecPriceStateURL)
+
+
+    })
+}
+
+freqEvent()
 
 function displayKwGraph (KwArray) {
 
