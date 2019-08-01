@@ -90,6 +90,10 @@ setTimeout(() => {
                         State Name: ${stateJson.State}
                         Population: ${stateJson.Population}
                         Square Miles: ${stateJson["Sq.Miles"]}
+                        Useage Rank: ${stateJson.ConsumeRank}
+                        Residential Accounts: ${stateJson.CustAccts}
+                        Total Production: ${stateJson.TotEnergy}
+                        Renewable Energy Production: ${stateJson.RenewEnergy}
                     </div>`
                 let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
 
