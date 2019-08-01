@@ -69,8 +69,40 @@ setTimeout(() => {
 
         })
     }
+      
+
+}, 1000)
+
+setTimeout(() => {
+    let states = document.getElementsByTagName("text")
+    for(let i = 0; i < states.length; i++){
+        stateClass = states[i].className.animVal
+        let sm_state = [].slice.call(document.getElementsByClassName(stateClass))
+        let stateAbbr = stateClass.slice(-2)
+        sm_state.forEach(element => {
+            element.addEventListener('click', e => {
+                dropDownState.value = stateAbbr
+                let stateJson = allStatesInfo.filter(stateInfo => {
+                    return stateInfo.Abbreviation == stateAbbr
+                })[0]
+                stateSelected.innerHTML = `
+                    <div>
+                        State Name: ${stateJson.State}
+                        Population: ${stateJson.Population}
+                        Square Miles: ${stateJson["Sq.Miles"]}
+                    </div>`
+                let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
+
+                let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${stateAbbr}-RES.A`
     
-    menuEvent()    
+                displayStateData(elecSalesStateURL)
+    
+                displayPriceData(elecPriceStateURL)
+            })
+
+        })
+    }
+        
 
 }, 1000)
 
@@ -90,6 +122,8 @@ function menuEvent() {
     })
 }
 
+menuEvent()
+
 function displayKwGraph (KwArray) {
 
     var chart = new CanvasJS.Chart("kwContainer", {
@@ -103,7 +137,7 @@ function displayKwGraph (KwArray) {
         },
         data: [{        
             type: "column",  
-            showInLegend: true, 
+            showInLegend: false, 
             legendMarkerColor: "grey",
             legendText: "MMbbl = one million barrels",
             dataPoints: KwArray
