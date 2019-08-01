@@ -9,7 +9,9 @@
 </head>
 <body>
 
-    <div id="container">
+    <div id="header">
+        <h1>B.P.T. United States Energy Analysis</h1>
+    </div>
 
         <div id="inner-container">
 
@@ -20,14 +22,12 @@
             <div id="stateSelected">
                 
             </div>
-
+            
         </div>
+        
+    <div id="dropDownMenu">
 
-    </div>
-
-    <div>
             <select id="dropDownState">
-                <option value="Select">Select State</option>
                 <option value="AK">Alaska</option>
                 <option value="AL">Alabama</option>
                 <option value="AZ">Arizona</option>
@@ -83,14 +83,17 @@
 
 
     </div>
+
+    <div id="charts">
+        <div id="kwContainer" style="height: 370px; max-width: 920px;"></div>
+        <div id="priceContainer" style="height: 370px; max-width: 920px;"></div>
+    </div>
     
 </body>
     <script src="mapdata.js"></script>
     <script src="usmap.js"></script>
     <script src="select.js"></script>
     <script src="allstateinfo.js"></script>
-<div id="kwContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
-<div id="priceContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
     <script src="app.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </html>
