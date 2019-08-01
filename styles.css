@@ -6,7 +6,7 @@
     }
 
     #dropDownState{
-        background-color: cadetblue;
+        background-color: #51cda0;
     }
 
     #dropDownMenu{
@@ -73,6 +73,9 @@ body{
 
 #header{
     background-color: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #header h1{
@@ -81,4 +84,11 @@ body{
     font-family: sans-serif;
     font-weight: lighter !important;
     text-decoration: none;
+    padding: 5px;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    padding: 10px;
 }
