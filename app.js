@@ -54,15 +54,15 @@ setTimeout(() => {
                     return stateInfo.Abbreviation == stateAbbr
                 })[0]
                 stateSelected.innerHTML = `
-                    <div>
-                        State Name: ${stateJson.State}
-                        Population: ${stateJson.Population}
-                        Square Miles: ${stateJson["Sq.Miles"]}
-                        Useage Rank: ${stateJson.ConsumeRank}
-                        Residential Accounts: ${stateJson.CustAccts}
-                        Total Production: ${stateJson.TotEnergy}
-                        Renewable Energy Production: ${stateJson.RenewEnergy}
-                    </div>`
+                    <ul>
+                        <li>State Name: ${stateJson.State}</li>
+                        <li>Population: ${stateJson.Population}</li>
+                        <li>Square Miles: ${stateJson["Sq.Miles"]}</li>
+                        <li>Useage Rank: ${stateJson.ConsumeRank}</li>
+                        <li>Residential Accounts: ${stateJson.CustAccts}</li>
+                        <li>Total Production: ${stateJson.TotEnergy}</li>
+                        <li>Renewable Energy Production: ${stateJson.RenewEnergy}</li>
+                    </ul>`
                 let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
 
                 let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${stateAbbr}-RES.A`
@@ -92,15 +92,15 @@ setTimeout(() => {
                     return stateInfo.Abbreviation == stateAbbr
                 })[0]
                 stateSelected.innerHTML = `
-                    <div>
-                        State Name: ${stateJson.State}
-                        Population: ${stateJson.Population}
-                        Square Miles: ${stateJson["Sq.Miles"]}
-                        Useage Rank: ${stateJson.ConsumeRank}
-                        Residential Accounts: ${stateJson.CustAccts}
-                        Total Production: ${stateJson.TotEnergy}
-                        Renewable Energy Production: ${stateJson.RenewEnergy}
-                    </div>`
+                    <ul>
+                        <li>State Name: ${stateJson.State}</li>
+                        <li>Population: ${stateJson.Population}</li>
+                        <li>Square Miles: ${stateJson["Sq.Miles"]}</li>
+                        <li>Useage Rank: ${stateJson.ConsumeRank}</li>
+                        <li>Residential Accounts: ${stateJson.CustAccts}</li>
+                        <li>Total Production: ${stateJson.TotEnergy}</li>
+                        <li>Renewable Energy Production: ${stateJson.RenewEnergy}</li>
+                    </ul>`
                 let elecSalesStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.SALES.${stateAbbr}-RES.A`
 
                 let elecPriceStateURL = `http://api.eia.gov/series/?api_key=e54459a328bb4d1b3ede8dc26cf085d9&series_id=ELEC.PRICE.${stateAbbr}-RES.A`
