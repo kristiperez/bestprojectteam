@@ -55,10 +55,10 @@ setTimeout(() => {
                 })[0]
                 stateSelected.innerHTML = `
                     <ul>
-                        <li>State Name: ${stateJson.State}</li>
+                        <h3>${stateJson.State}</h3>
                         <li>Population: ${stateJson.Population}</li>
                         <li>Square Miles: ${stateJson["Sq.Miles"]}</li>
-                        <li>Useage Rank: ${stateJson.ConsumeRank}</li>
+                        <li>Usage Rank: ${stateJson.ConsumeRank}</li>
                         <li>Residential Accounts: ${stateJson.CustAccts}</li>
                         <li>Total Production: ${stateJson.TotEnergy}</li>
                         <li>Renewable Energy Production: ${stateJson.RenewEnergy}</li>
@@ -93,10 +93,10 @@ setTimeout(() => {
                 })[0]
                 stateSelected.innerHTML = `
                     <ul>
-                        <li>State Name: ${stateJson.State}</li>
+                        <h3>${stateJson.State}</h3>
                         <li>Population: ${stateJson.Population}</li>
                         <li>Square Miles: ${stateJson["Sq.Miles"]}</li>
-                        <li>Useage Rank: ${stateJson.ConsumeRank}</li>
+                        <li>Usage Rank: ${stateJson.ConsumeRank}</li>
                         <li>Residential Accounts: ${stateJson.CustAccts}</li>
                         <li>Total Production: ${stateJson.TotEnergy}</li>
                         <li>Renewable Energy Production: ${stateJson.RenewEnergy}</li>
