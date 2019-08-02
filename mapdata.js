@@ -477,14 +477,16 @@ var simplemaps_usmap_mapdata = {
       0: {
         name: 'New York City',					
         lat: 40.7143528,
-        lng: -74.0059731
+		lng: -74.0059731,
+		hide: 'yes'
       },
 
       1: {
         name: 'Anchorage',
         lat: 61.2180556,
         lng: -149.9002778, 
-        color: 'default'
+		color: 'default',
+		hide: 'yes'
       }
     },			
 	
@@ -495,7 +497,7 @@ var simplemaps_usmap_mapdata = {
       'NJ':{parent_id: 'NJ', x: '883', y: '273', pill: 'yes', width: 45, display: 'all'},
       'DE':{parent_id: 'DE', x: '883', y: '303', pill: 'yes', width: 45, display: 'all'},
       'MD':{parent_id: 'MD', x: '932', y: '303', pill: 'yes', width: 45, display: 'all'},
-      'DC':{parent_id: 'DC', x: '884', y: '332', pill: 'yes', width: 45, display: 'all'},
+      'DC':{parent_id: 'DC', x: '884', y: '332', pill: 'yes', width: 45, display: 'hide'},
       'MA':{parent_id: 'MA', x: '932', y: '213', pill: 'yes', width: 45, display: 'all'},
       'CT':{parent_id: 'CT', x: '932', y: '243', pill: 'yes', width: 45, display: 'all'},		
       'HI':{parent_id: 'HI', x: 305, y: 565, pill: 'yes'},

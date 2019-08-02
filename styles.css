@@ -7,28 +7,44 @@
 
     #dropDownState{
         background-color: #51cda0;
-    }
-
-    #dropDownFreq{
-        background-color: #51cda0;
+        margin-top: 10px;
     }
 
     #dropDownMenu{
         display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
-        margin-top: 50px;
+        flex-direction: column;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        width: 100px;
+        align-items: baseline;
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: large;
     }
 
     #freqMenu{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         margin-bottom: 50px;
-        margin-top: 50px;
+        margin-top: 20px;
+        align-items: baseline;
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: large;
+    }
+
+    #dropDownFreq{
+        background-color: #51cda0;
+        margin-top: 10px;
     }
 
     #kwContainer{
         margin-bottom: 50px;
+    }
+    
+    #stateSelected{
+        display: flex;
+        height: 50px;
     }
 
 }
@@ -48,17 +64,19 @@
 
     #stateSelected{
         display: flex;
-        padding: 12px;
-        height: 450px;
+        height: 250px;
+        padding: 20px;
+        margin: 50px;
     }
 
-    #stateSelected div{
-        padding: 10px;
-        height: 450px;
+    ul h3{
+        text-align: center;
+        background-color: #51cda0;
     }
 
-    #dropDownState{
-        display: none;
+    #stateSelected li{
+        padding: 5px;
+        margin-left: 25px;
     }
 
     #kwContainer{
@@ -74,6 +92,25 @@
 
     #priceContainer{
         margin-left: 222px;
+    }
+
+    #dropDownState{
+        display: none;
+    }
+
+    #dropDownMenu{
+        display: none;
+    }
+
+    #freqMenu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dropDownFreq{
+        background-color:#51cda0;
+        margin-top: 10px;
+        width: 200px;
     }
 
 }
