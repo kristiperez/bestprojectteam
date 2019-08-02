@@ -75,7 +75,6 @@ setTimeout(() => {
         })
     }
       
-
 }, 1000)
 
 setTimeout(() => {
@@ -113,7 +112,6 @@ setTimeout(() => {
         })
     }
         
-
 }, 1000)
 
 function menuEvent() {
@@ -148,19 +146,18 @@ function freqEvent() {
     
         displayPriceData(elecPriceStateURL)
 
-
     })
 }
-
 freqEvent()
 
 function displayKwGraph (KwArray) {
-
+    let stateText = dropDownState.options[dropDownState.selectedIndex].text
+    console.log(stateText)
     var chart = new CanvasJS.Chart("kwContainer", {
         animationEnabled: true,
         theme: "light2", // "light1", "light2", "dark1", "dark2"
         title:{
-            text: "Retail Sales of Electricity"
+            text: `${stateText} Retail Sales of Electricity`
         },
         axisY: {
             title: "million kilowatthours"
@@ -175,14 +172,14 @@ function displayKwGraph (KwArray) {
     });
     chart.render();
 }
-    
+ 
 function displayPriceGraph (PriceArray) {
-
+    let stateText = dropDownState.options[dropDownState.selectedIndex].text
     var chart = new CanvasJS.Chart("priceContainer", {
         animationEnabled: true,
         theme: "light2", // "light1", "light2", "dark1", "dark2"
         title:{
-            text: "Average Retail Price of Electricity"
+            text: `${stateText} Retail Price of Electricity`
         },
         axisY: {
             title: "cents per kilowatthour"
