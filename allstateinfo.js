@@ -48,5 +48,5 @@ let allStatesInfo = [
     {"Abbreviation":"ND","State":"North Dakota","Population":"755,393","Sq.Miles":"70,698","ConsumeRank":"39","TotEnergy":"3,691 trillion Btu (4.2% total)","RenewEnergy":"197 trillion Btu","CustAccts":"386,696"},
     {"Abbreviation":"AK","State":"Alaska","Population":"739,795","Sq.Miles":"665,384","ConsumeRank":"40","TotEnergy":"1,454 trillion Btu (1.7% total)","RenewEnergy":"23 trillion Btu","CustAccts":"290,947"},
     {"Abbreviation":"VT","State":"Vermont","Population":"623,657","Sq.Miles":"9,616","ConsumeRank":"51","TotEnergy":"38 trillion Btu (<0.1% total)","RenewEnergy":"38 trillion Btu","CustAccts":"317,189"},
-    {"Abbreviation":"WY","State":"Wyoming","Population":"579,315","Sq.Miles":"97,813","ConsumeRank":"42","TotEnergy":"7,788 trillion Btu (8.8% total)","RenewEnergy":"56 trillion Btuy","CustAccts":"276,603"},
+    {"Abbreviation":"WY","State":"Wyoming","Population":"579,315","Sq.Miles":"97,813","ConsumeRank":"42","TotEnergy":"7,788 trillion Btu (8.8% total)","RenewEnergy":"56 trillion Btu","CustAccts":"276,603"},
 ]
