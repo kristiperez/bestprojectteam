@@ -99,7 +99,7 @@
     #stateSelected li{
         padding: calc(2px + .5vh);
         list-style: none;
-        font-size: calc(6px + 1vw);
+        font-size: calc(6px + .85vw);
     }
 
     #charts{
@@ -111,7 +111,7 @@
     #kwContainer{
         width: 80vw !important;
         height: 30vw;
-        margin-top: -7vh;
+        margin-top: -7vw;
     }
 
     #priceContainer{
@@ -124,8 +124,8 @@
         flex-direction: column;
         font-family: sans-serif;
         font-weight: 400;
-        margin-top: -17vh;
-        margin-bottom: 50px;
+        margin-top: -15vh;
+        margin-bottom: 10vw;
     }
 
     #dropDownFreq{
