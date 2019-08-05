@@ -15,7 +15,7 @@ The following images are examples of what you will find while using our applicat
 <br/>
 The next set of images show annual and quarterly graphs when a state is selected:
 <br/>
-
+<br/>
 <img src='desktop-images/state-annual.png' width="700"></img>
 
 <img src='desktop-images/state-quarter.png' width="700"></img>
@@ -23,7 +23,7 @@ The next set of images show annual and quarterly graphs when a state is selected
 <br/>
 The last set of images are examples of our application on a mobile device with annual and quarterly data:
 <br/>
-
+<br/>
 <img src='mobile-images/menu-mobile.png' width="400"></img>
 <br/>
 <img src='mobile-images/annual-mobile.png' width="400"></img>
