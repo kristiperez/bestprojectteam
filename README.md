@@ -2,7 +2,7 @@ Welcome to our project! This is a collaboration of Kristi Perez (https://github.
 
 We have focused on portraying information pertaining to residential electricity usage in the fifty states. This includes the number of residential electricity accounts in each state, their overall usages, the average price per kWh, and other similar categories. This application could easily be adjusted to portray any of the information in the EIA API (https://www.eia.gov/opendata/). 
 
-In creating this app, we have pulled JSON files from the API and displayed the information they contain both graphically and textually. Users are able to click on a state in the interactive map to pull up a state snapshot. These click actions also open the graphs section, which displays changes over time. As such, users can easily click through the fifty states to view not only a snapshot of each state's current situation but also a representation of its past.
+In creating this app, we have pulled JSON files from the API and displayed the information they contain both graphically and textually. Users are able to click on a state in the interactive map to pull up a state snapshot. These click actions also open the graphs section, which displays changes over time. As such, users can easily click through the map to view not only a snapshot of each state's current situation but also a representation of its past.
 
 The following images are examples of what you will find while using our application:
 
