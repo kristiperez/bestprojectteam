@@ -4,6 +4,8 @@ We have focused on portraying information pertaining to residential electricity 
 
 In creating this app, we have pulled JSON files from the API and displayed the information they contain both graphically and textually. Users are able to click on a state in the interactive map to pull up a state snapshot. These click actions also open the graphs section, which displays changes over time. As such, users can easily click through the map to view not only a snapshot of each state's current situation but also a representation of its past.
 
+You can find our app deployed at http://bpt-energy.surge.sh/ 
+
 The following images are examples of what you will find while using our application:
 
 <img src='desktop-images/index.png' width="700"></img>
