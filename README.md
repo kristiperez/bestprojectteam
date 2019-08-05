@@ -33,4 +33,4 @@ The last set of images are examples of our application on a mobile device with a
 <img src='mobile-images/quarter-mobile.png' width="400"></img>
 <br/>
 <br/>
-This project was made jointly by all members of the group with all members contributing to its creation, and we hope that it makes studying the US energy market accessible to more people. 
+This project was made jointly by all members of the group with all members contributing to its creation. 
