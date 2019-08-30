@@ -161,3 +161,8 @@ img{
     height: 90px;
     padding: 10px;
 }
+
+p {
+    text-align: center;
+    font-style: italic;
+}
